@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Para Lizbeth 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--r3:#ff8fb8;--r4:#e0457f;--tx:#7d2a52;--paper:#fffafc;--script:'Dancing Script','Segoe Script','Brush Script MT',cursive}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:Quicksand,system-ui,sans-serif;color:var(--tx);background:linear-gradient(160deg,#ffe9f2,#ffc7dc 55%,#ffb3d0) fixed;min-height:100dvh;display:flex;flex-direction:column;align-items:center;overflow-x:hidden}
+#fx{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.fl{position:absolute;bottom:-8vh;opacity:0;animation:up linear forwards}
+@keyframes up{10%{opacity:.9}to{transform:translate(var(--dx),-115vh) rotate(var(--rot));opacity:0}}
+.pop{position:fixed;pointer-events:none;font-size:22px;z-index:9;animation:pop 1.1s ease-out forwards}
+@keyframes pop{from{transform:translate(-50%,-50%) scale(.4);opacity:1}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.2);opacity:0}}
+
+#cover{position:relative;z-index:2;min-height:100dvh;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;transition:opacity .8s,transform .8s}
+#cover.out{opacity:0;transform:scale(.94)}
+#cover h2{font-family:var(--script);font-size:clamp(44px,13vw,64px);color:var(--r4);text-shadow:0 3px 14px rgba(255,255,255,.8)}
+#cover p{font-size:17px;margin-top:6px}
+#hint{margin-top:10px;font-weight:600;color:var(--r4);animation:beat 1.6s infinite;transition:opacity .4s}
+#env{position:relative;width:min(78vw,320px);aspect-ratio:3/2;margin:34px 0 18px;cursor:pointer;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(-1.5deg)}}
+@keyframes beat{0%,100%{transform:scale(1)}20%{transform:scale(1.14)}40%{transform:scale(1)}60%{transform:scale(1.09)}}
+#env>*{position:absolute}
+.eb{inset:0;border-radius:12px;background:#ff9cc0;box-shadow:0 18px 40px rgba(224,69,127,.35)}
+.pap{left:8%;right:8%;top:7%;bottom:7%;background:var(--paper);border-radius:8px;display:grid;place-items:center;font-family:var(--script);font-size:26px;color:var(--r4);transition:transform .9s .6s cubic-bezier(.2,.8,.2,1)}
+.fr{inset:0;border-radius:12px;background:#ff7fae;clip-path:polygon(0 100%,0 26%,50% 66%,100% 26%,100% 100%)}
+.flap{left:0;top:0;width:100%;height:66%;background:#ff679f;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s,z-index 0s .4s;z-index:3}
+.seal{left:50%;top:66%;transform:translate(-50%,-50%);font-size:34px;z-index:4;transition:opacity .4s}
+#env.open{animation:none}
+#env.open .flap{transform:rotateX(180deg);z-index:0}
+#env.open .pap{transform:translateY(-58%)}
+#env.open .seal{opacity:0}
+
+#letter{display:none;position:relative;z-index:2;width:100%;max-width:560px;padding:26px 16px 70px}
+#letter.show{display:block;animation:fu 1s}
+@keyframes fu{from{opacity:0;transform:translateY(30px)}}
+.card{background:var(--paper);border-radius:20px;padding:30px 22px 26px;box-shadow:0 20px 50px rgba(224,69,127,.28);outline:2px dashed #ffb6d1;outline-offset:-12px}
+.card h1{font-family:var(--script);font-size:clamp(36px,10vw,50px);color:var(--r4);text-align:center;margin-bottom:6px}
+.ln{opacity:0;transform:translateY(14px);margin:16px 0;font-size:clamp(16.5px,4.4vw,19px);line-height:1.7}
+.ln.in{animation:fi .9s forwards}
+@keyframes fi{to{opacity:1;transform:none}}
+.key{font-family:var(--script);font-size:clamp(25px,7vw,32px);color:var(--r4);line-height:1.35;text-align:center}
+.firma{font-family:var(--script);font-size:30px;text-align:right;color:var(--r4)}
+.play{text-align:center;border-top:2px dotted var(--r3);padding-top:14px}
+.hb{font-size:66px;background:none;border:0;cursor:pointer;display:block;margin:6px auto;animation:beat 1.4s infinite}
+.ph{min-height:34px;font-family:var(--script);font-size:25px;color:var(--r4);text-align:center;opacity:0}
+.ph.sw{animation:sw .6s forwards}
+@keyframes sw{from{opacity:0;transform:translateY(10px) scale(.9)}to{opacity:1;transform:none}}
+.cnt{font-size:14px;opacity:.8}
+.route{display:flex;align-items:center;justify-content:space-between;font-weight:600;font-size:15px;margin:6px 0 16px}
+.path{position:relative;flex:1;height:0;margin:0 10px;border-top:3px dotted var(--r3)}
+#fly{position:absolute;left:0;top:-17px;font-size:26px;font-style:normal;opacity:0}
+.btn{background:linear-gradient(135deg,#ff7fae,#e0457f);color:#fff;border:0;border-radius:999px;padding:12px 26px;font:600 16px Quicksand,sans-serif;box-shadow:0 8px 20px rgba(224,69,127,.4);cursor:pointer}
+.btn:disabled{opacity:.6}
+.dist{text-align:center}
+@media(prefers-reduced-motion:reduce){#env,.hb,#hint{animation:none}}
+</style>
+</head>
+<body>
+<div id="fx"></div>
+
+<section id="cover">
+  <h2>Para Lizbeth</h2>
+  <p>Tengo algo que decirte desde el corazón 💌</p>
+  <div id="env" role="button" tabindex="0" aria-label="Abrir la carta">
+    <div class="eb"></div>
+    <div class="pap">♡</div>
+    <div class="fr"></div>
+    <div class="flap"></div>
+    <div class="seal">💗</div>
+  </div>
+  <div id="hint">Toca el sobre para abrirlo</div>
+</section>
+
+<section id="letter">
+  <div class="card">
+    <h1>Para Lizbeth 🌸</h1>
+    <p class="ln">Mi querida Lizbeth,</p>
+    <p class="ln key">Por más lejos que estés, no voy a parar ni me voy a cansar de luchar por ti.</p>
+    <p class="ln">No hay kilómetros, ni horas de diferencia, ni pantallas que puedan con lo que siento por ti.</p>
+    <p class="ln key">Por más lejos que estés de mí, siempre te voy a llevar en mi corazón.</p>
+    <p class="ln">Aunque hoy nos separe un país entero, te pienso en cada amanecer y me duermo con tu nombre en la cabeza. Allá en México está mi lugar favorito del mundo.</p>
+    <p class="ln">Y cuando por fin se acabe la distancia, te prometo el abrazo más largo, más fuerte y más lleno de cariño que hayas recibido.</p>
+    <p class="ln firma">Siempre tuyo, Kevin 💗</p>
+
+    <div class="ln play">
+      <div>Toca el corazón 👇</div>
+      <button class="hb" id="hb" aria-label="Mandar un corazón">💗</button>
+      <div class="ph" id="ph"></div>
+      <div class="cnt">Corazones enviados: <b id="n">0</b></div>
+    </div>
+
+    <div class="ln dist">
+      <div class="route"><span>🧸 Yo</span><div class="path"><i id="fly">💌</i></div><span>🇲🇽 Lizbeth</span></div>
+      <button class="btn" id="hug">Enviarte un abrazo</button>
+      <div class="ph" id="hugmsg" style="margin-top:10px"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+const E=['💗','💖','💕','🌸','🌷','✨','💞','🩷'],$=s=>document.querySelector(s),fx=$('#fx');
+const rnd=(a,b)=>a+Math.random()*(b-a),pick=a=>a[Math.floor(Math.random()*a.length)];
+
+function float(){
+  if(fx.childElementCount>38||document.hidden)return;
+  const s=document.createElement('span');s.className='fl';s.textContent=pick(E);
+  s.style.cssText=`left:${rnd(0,95)}vw;font-size:${rnd(14,34)}px;--dx:${rnd(-70,70)}px;--rot:${rnd(-45,45)}deg;animation-duration:${rnd(7,14)}s`;
+  fx.appendChild(s);s.onanimationend=()=>s.remove();
+}
+for(let i=0;i<14;i++)setTimeout(float,i*250);
+setInterval(float,650);
+
+function burst(x,y,n=6){
+  for(let i=0;i<n;i++){
+    const s=document.createElement('span'),a=rnd(0,6.28),d=rnd(40,110);
+    s.className='pop';s.textContent=pick(E);
+    s.style.cssText=`left:${x}px;top:${y}px;--dx:${Math.cos(a)*d}px;--dy:${Math.sin(a)*d-30}px`;
+    document.body.appendChild(s);s.onanimationend=()=>s.remove();
+  }
+}
+addEventListener('pointerdown',e=>burst(e.clientX,e.clientY,4));
+
+function say(sel,txt){const el=$(sel);el.textContent=txt;el.classList.remove('sw');void el.offsetWidth;el.classList.add('sw');}
+
+let opened=false;
+function openEnv(){
+  if(opened)return;opened=true;
+  $('#env').classList.add('open');$('#hint').style.opacity=0;
+  burst(innerWidth/2,innerHeight/2,14);
+  setTimeout(()=>$('#cover').classList.add('out'),2300);
+  setTimeout(()=>{
+    $('#cover').style.display='none';$('#letter').classList.add('show');scrollTo(0,0);
+    document.querySelectorAll('.ln').forEach((el,i)=>setTimeout(()=>el.classList.add('in'),500+i*1000));
+  },3100);
+}
+$('#env').onclick=openEnv;
+$('#env').onkeydown=e=>{if(e.key==='Enter'||e.key===' ')openEnv()};
+
+const P=['Eres mi persona favorita 💗','Pienso en ti todos los días 🌸','La distancia solo es un número ✨','Mi corazón está donde tú estés 💞','Por ti no me rindo, nunca 🌹','Algún día no habrá kilómetros entre nosotros 🫶'];
+let n=0;
+$('#hb').onclick=function(){
+  n++;$('#n').textContent=n;
+  say('#ph',n%10===0?`¡${n} corazones! Yo te mando mil más 💕`:P[(n-1)%P.length]);
+  const r=this.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,8);
+};
+
+$('#hug').onclick=function(){
+  const b=this,f=$('#fly');b.disabled=true;$('#hugmsg').style.opacity=0;
+  const a=f.animate([
+    {left:'0%',transform:'translateY(0) scale(1)',opacity:1},
+    {left:'50%',transform:'translateY(-28px) scale(1.5)',opacity:1},
+    {left:'calc(100% - 26px)',transform:'translateY(0) scale(1)',opacity:1}
+  ],{duration:2600,easing:'ease-in-out',fill:'forwards'});
+  a.onfinish=()=>{
+    const r=f.getBoundingClientRect();burst(r.left+13,r.top+13,12);a.cancel();
+    say('#hugmsg','Abrazo entregado en México 🤗 ¿lo sentiste?');
+    b.disabled=false;b.textContent='Enviar otro abrazo';
+  };
+};
+</script>
+</body>
+</html>
